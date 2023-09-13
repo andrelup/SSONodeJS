@@ -1,0 +1,32 @@
+{
+  "name": "ssonodejs",
+  "version": "1.0.0",
+  "description": "Mini proyecto para testear la auntenticidad con sso con nodeJS",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrelup/SSONodeJS.git"
+  },
+  "author": "andrelup",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrelup/SSONodeJS/issues"
+  },
+  "homepage": "https://github.com/andrelup/SSONodeJS#readme",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
+  "dependencies": {
+    "and": "^0.0.3",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jsonwebtoken": "^8.5.1",
+    "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1",
+    "nodemon": "^3.0.1"
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <button type="button" id="loginButon">Login</button>
+    <button type="button" id="logoutButon">Logout</button>
+</body>
+<script>
+    document.getElementById("loginButon").addEventListener("click", function(){
+        console.log('Se hizo clic en el botón login');
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', '/login');
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        const data = {
+            username: 'john',
+            password: 'secret'
+        };
+        const json = JSON.stringify(data);
+        xhr.addEventListener('load', function() {
+            // Código que se ejecuta cuando la respuesta del servidor llega con éxito
+            console.log('La respuesta es', xhr.responseText);
+        });
+        xhr.send(json);
+    });
+    document.getElementById("logoutButon").addEventListener("click", function(){
+        console.log('Se hizo clic en el botón logout');
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', '/logout');
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        const json = JSON.stringify(data);
+        xhr.addEventListener('load', function() {
+            // Código que se ejecuta cuando la respuesta del servidor llega con éxito
+            console.log('La respuesta es', xhr.responseText);
+        });
+        xhr.send(json);
+    });
+</script>
+</html>
